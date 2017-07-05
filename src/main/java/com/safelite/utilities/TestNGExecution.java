@@ -43,7 +43,7 @@ public class TestNGExecution {
 		String testCaseID=new Excel_Utility().getSheetCellData(sheet, "ExecutionType",1);
 		//TestNGExecution.createXmlDoc(sRemoteMachine);
 		//switch (sRemoteMachine) 
-		switch (sRemoteMachine)
+		switch ("Parallel")
 		{
 		case "Parallel":
 			TestNGExecution.parallelExecution(iRowsCnt);
