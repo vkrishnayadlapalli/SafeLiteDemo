@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="GridSuite" parallel="tests">
+  <test name="Windows-7-firefox-46-cloudSauceLabs_TC_GetQuoteByYearMakeModel">
+    <parameter name="seleniumgridurl" value="local"/>
+    <parameter name="environment" value="cloudSauceLabs"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="browserVersion" value="46"/>
+    <parameter name="automationName" value="selenium"/>
+    <parameter name="platformName" value="Windows 7"/>
+    <parameter name="deviceName" value="NA"/>
+    <classes>
+      <class name="com.safelite.scripts.TC_GetQuoteByYearMakeModel"/>
+    </classes>
+  </test> <!-- Windows-7-firefox-46-cloudSauceLabs_TC_GetQuoteByYearMakeModel -->
+  <test name="Windows-7-chrome-56-local_TC_GetQuoteByYearMakeModel">
+    <parameter name="seleniumgridurl" value="local"/>
+    <parameter name="environment" value="local"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="56"/>
+    <parameter name="automationName" value="selenium"/>
+    <parameter name="platformName" value="Windows 7"/>
+    <parameter name="deviceName" value="NA"/>
+    <classes>
+      <class name="com.safelite.scripts.TC_GetQuoteByYearMakeModel"/>
+    </classes>
+  </test> <!-- Windows-7-chrome-56-local_TC_GetQuoteByYearMakeModel -->
+  <test name="Android-7.0-Browser-NA-local_TC_GetQuoteByYearMakeModel">
+    <parameter name="app" value="NA"/>
+    <parameter name="appPackage" value="NA"/>
+    <parameter name="deviceName" value="52003a5b3fdf1100"/>
+    <parameter name="url" value="http://127.0.0.1:4444"/>
+    <parameter name="appActivity" value="NA"/>
+    <parameter name="seleniumgridurl" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="environment" value="local"/>
+    <parameter name="appiumUrl" value="http:/127.0.0.1:4723/wd/hub"/>
+    <parameter name="browser" value="Browser"/>
+    <parameter name="browserVersion" value="NA"/>
+    <parameter name="platformVersion" value="7.0"/>
+    <parameter name="automationName" value="selenium"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="testCaseID" value="1001"/>
+    <classes>
+      <class name="com.safelite.scripts.TC_GetQuoteByYearMakeModel"/>
+    </classes>
+  </test> <!-- Android-7.0-Browser-NA-local_TC_GetQuoteByYearMakeModel -->
+  <test name="Android-7.0-chrome-NA-cloudSauceLabs_TC_GetQuoteByYearMakeModel">
+    <parameter name="app" value="NA"/>
+    <parameter name="appPackage" value="NA"/>
+    <parameter name="deviceName" value="Android GoogleAPI Emulator"/>
+    <parameter name="url" value="http://127.0.0.1:4444"/>
+    <parameter name="appActivity" value="NA"/>
+    <parameter name="seleniumgridurl" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="environment" value="cloudSauceLabs"/>
+    <parameter name="appiumUrl" value="http:/127.0.0.1:4723/wd/hub"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="NA"/>
+    <parameter name="platformVersion" value="7.0"/>
+    <parameter name="automationName" value="selenium"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="testCaseID" value="1001"/>
+    <classes>
+      <class name="com.safelite.scripts.TC_GetQuoteByYearMakeModel"/>
+    </classes>
+  </test> <!-- Android-7.0-chrome-NA-cloudSauceLabs_TC_GetQuoteByYearMakeModel -->
+</suite> <!-- GridSuite -->

@@ -1,0 +1,13 @@
+*.class
+.idea/*
+results/*
+target/*
+test-output/*
+/HTMLlogs/*
+/Logs/*
+/MainLogs/*
+*.iml
+ATDAutomation.iml
+/debug.log
+/target/
+/bin/

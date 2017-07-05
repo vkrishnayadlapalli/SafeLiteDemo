@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.safelite.Automation</groupId>
+	<artifactId>Safelite</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>Safelite Automation</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<selenium.version>2.53.1</selenium.version>
+		<maven-compiler.version>3.5.1</maven-compiler.version>
+		<testng.version>6.9.6</testng.version>
+		<java.version>1.8</java.version>
+		<maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
+		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+		<maven-postman-plugin.version>0.1.6</maven-postman-plugin.version>
+		<testset>testng_Web.xml</testset>
+		<phantomjsdriver.version>1.1.0</phantomjsdriver.version>
+		<ojdbc.version>12.1.0.2</ojdbc.version>
+		<jdbc6>11.1.0.7.0</jdbc6>
+		<reportng.version>1.1.4</reportng.version>
+		<guice.version>4.0-beta4</guice.version>
+		<diffutils.version>1.2.1</diffutils.version>
+		<jsonSimple.version>1.1.1</jsonSimple.version>
+		<opencsv.version>2.3</opencsv.version>
+		<!-- <nexus.server.url>http://nexus.crunchtime.local:8080/nexus</nexus.server.url> -->
+		<log4j.version>1.2.17</log4j.version>
+		<log4j-api.version>2.3</log4j-api.version>
+		<log4j-core.version>2.3</log4j-core.version>
+		<poi.version>3.12</poi.version>
+		<poi-ooxml.version>3.8</poi-ooxml.version>
+		<appium.java-client.version>2.2.0</appium.java-client.version>
+		<jxl.version>2.6.12</jxl.version>
+		<javax.mail.version>1.4.6</javax.mail.version>
+		<jsoup.version>1.8.2</jsoup.version>
+		<soapui.version>4.0.1.0</soapui.version>
+		<xmlbeans.version>2.5.0</xmlbeans.version>
+		<xml-apis.version>1.4.01</xml-apis.version>
+		<javassist.version>3.12.1.GA</javassist.version>
+		<mysql-connector-java.version>5.1.39</mysql-connector-java.version>
+		<mybatis.version>3.4.0</mybatis.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<sikulixapi.version>1.1.0</sikulixapi.version> 
+	</properties>
+
+	<dependencies>
+
+		<!--<dependency> <groupId>reporter</groupId> <artifactId>reporter</artifactId>
+			<version>1.0.0</version> <scope>system</scope> <systemPath>${project.basedir}\lib\CignitiReporter-1.0.jar</systemPath>
+			</dependency> -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi-ooxml.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1</version>
+</dependency>
+
+
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>${appium.java-client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>${jxl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup.version}</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>compile</scope>
+		</dependency> -->
+		<dependency>
+			<groupId>com.github.redfish4ktc.soapui</groupId>
+			<artifactId>soapui</artifactId>
+			<version>${soapui.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>${xmlbeans.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>${xml-apis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>${javassist.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.detro.ghostdriver</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>${phantomjsdriver.version}</version>
+			<!--avoid download of older ver# selenium-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-remote-driver</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-server</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-java</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>${ojdbc.version}</version>
+		</dependency> -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>${reportng.version}</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${guice.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		      <groupId>com.sikulix</groupId>
+		      <artifactId>sikulixapi</artifactId>
+		      <version>${sikulixapi.version}</version>
+		      </dependency>
+		<dependency>
+			<groupId>com.googlecode.java-diff-utils</groupId>
+			<artifactId>diffutils</artifactId>
+			<version>${diffutils.version}</version>
+		</dependency>
+		<!-- Add this dependency for use of cdp diff test -->
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>${opencsv.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+   <groupId>org.apache.pdfbox</groupId>
+   <artifactId>pdfbox</artifactId>
+   <version>1.8.1</version>
+  </dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>com.crunchtime.nexus.releases</id>
+			<name>Crunchtime Maven Repository - Releases</name>
+			<url>${nexus.server.url}/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+		</repository>
+		<!-- For developing against latest Crunchtime snapshots -->
+		<repository>
+			<id>com.crunchtime.nexus.snapshots</id>
+			<name>Crunchtime Maven Repository - Snapshots</name>
+			<url>${nexus.server.url}/content/repositories/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+
+		</repository>
+		<!-- For developing against latest Crunchtime 3rd party libraries -->
+		<repository>
+			<id>com.crunchtime.nexus.thirdparty</id>
+			<name>Crunchtime Maven Repository - Snapshots</name>
+			<url>${nexus.server.url}/content/repositories/thirdparty/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>public</id>
+			<url>${nexus.server.url}/content/repositories/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<!-- For developing against latest Crunchtime 3rd party libraries -->
+		<pluginRepository>
+			<id>com.crunchtime.nexus.thirdparty</id>
+			<name>Crunchtime Maven Repository - Snapshots</name>
+			<url>${nexus.server.url}/content/repositories/thirdparty/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>public</id>
+			<url>${nexus.server.url}/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				
+				<configuration>
+					<mainClass>com.safelite.utilities.TestNGExecution</mainClass>
+				
+					<parallel>methods</parallel>
+					<threadCount>5</threadCount>
+					<properties>
+						<!--
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+						-->
+						<property>
+							<name>listener</name>
+							<value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
+						</property>
+					</properties>
+					<!--
+					<workingDirectory>target/</workingDirectory>
+					-->
+					<!-- 	<suiteXmlFiles>
+							<suiteXmlFile>${project.build.testOutputDirectory}/${testset}</suiteXmlFile>
+						</suiteXmlFiles> -->
+					<!-- <suiteXmlFiles>
+						<suiteXmlFile>${testset}</suiteXmlFile>
+					</suiteXmlFiles> -->
+				</configuration>
+			</plugin>
+			<plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <configuration>
+					<mainClass>com.safelite.utilities.TestNGExecution</mainClass>
+				</configuration>
+          <version>1.6.0</version>
+        </plugin>
+  
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>${maven-project-info-reports-plugin.version}</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>index</report>
+							<!--<report>dependencies</report>-->
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>

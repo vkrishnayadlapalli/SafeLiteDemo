@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE suite SYSTEM 'http://testng.org/testng-1.0.dtd'>
+<suite name='Safelite Automation test suite' configfailurepolicy='continue' parallel='tests' thread-count='3'>
+
+<parameter name='suiteExecuted' value='Regression' />
+<parameter name='executionType' value='Parallel' />
+<listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+</listeners>
+	<test name="Android-Native" preserve-order='true'>
+			<parameter name="browser" value="chrome"></parameter>
+			<parameter name="automationName" value="selenium"></parameter>
+			<parameter name="browserVersion" value="NA"></parameter>
+			<parameter name="platformName" value="Android"></parameter>
+			<parameter name="environment" value="local"></parameter>
+			<parameter name="app" value="NA"></parameter>
+			<parameter name="appPackage" value="NA"></parameter>
+			<parameter name="appActivity" value="NA"></parameter>
+			<parameter name="platformVersion" value="7.0"></parameter>
+			<parameter name="appiumUrl" value="http://127.0.0.1:4723/wd/hub"></parameter>
+			<parameter name="deviceName" value="3208e46bb7126197"></parameter>
+			<parameter name="seleniumgridurl" value="http://127.0.0.1:4723/wd/hub"></parameter>
+		 <classes>
+			<class name="com.safelite.scripts.TC_GetQuote">
+			</class>
+		 </classes>
+	</test>
+</suite>

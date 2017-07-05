@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE suite SYSTEM 'http://testng.org/testng-1.0.dtd'>
+<suite name='Safelite Automation test suite' configfailurepolicy='continue' parallel="tests" thread-count="5" >
+
+	<parameter name='suiteExecuted' value='Regression' />
+	<parameter name='executionType' value='Sequential' />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<test name="chromeWindowsLocal" preserve-order='true'>
+		<parameter name="browser" value="chrome" />
+		<parameter name="automationName" value="selenium" />
+		<parameter name="browserVersion" value="46.0" />
+		<parameter name="platformName" value="windows 7" />
+		<parameter name="environment" value="local" />
+		<parameter name="seleniumgridurl" value="local" />
+		<parameter name="deviceName" value="NA"></parameter>
+		
+		<groups>
+	      <run>
+	      	<include name="regression" />
+	      </run>
+   		</groups>
+		
+		<classes>
+			<class
+				name="com.safelite.scripts.TC_GetQuoteByYearMakeModel"></class>	
+		</classes>
+	</test>
+
+	 <!-- <test name="firefoxWindows-SauceLabs" preserve-order='true'>
+		<parameter name="browser" value="firefox" />
+		<parameter name="automationName" value="selenium" />
+		<parameter name="browserVersion" value="46.0" />
+		<parameter name="platformName" value="windows 7" />
+		<parameter name="environment" value="cloudSauceLabs" />
+		<parameter name="seleniumgridurl" value="local" />
+		<parameter name="deviceName" value="NA"></parameter>
+		
+		<groups>
+	      <run>
+	      	<include name="regression" />
+	      </run>
+   		</groups>
+		
+		<classes>
+			<class
+				name="com.safelite.scripts.TC_GetQuoteByYearMakeModel"></class>		
+		</classes>
+	</test> -->
+	
+	<!-- <test name="Android-Mobile-Web-SauceLabs" preserve-order='true'>
+			<parameter name="browser" value="Chrome"></parameter>
+			<parameter name="automationName" value="selenium"></parameter>
+			<parameter name="browserVersion" value="NA"></parameter>
+			<parameter name="platformName" value="Android"></parameter>
+			<parameter name="environment" value="cloudSauceLabs"></parameter>
+			<parameter name="app" value="NA"></parameter>
+			<parameter name="appPackage" value="NA"></parameter>
+			<parameter name="appActivity" value="NA"></parameter>
+			<parameter name="platformVersion" value="7.0"></parameter>
+			<parameter name="appiumUrl" value="http:/0.0.0.0:5000/wd/hub"></parameter>
+			<parameter name="deviceName" value="Android GoogleAPI Emulator"></parameter>
+			<parameter name="seleniumgridurl" value="http://0.0.0.0:5000/wd/hub"></parameter>
+			
+			<groups>
+		      <run>
+		      	<include name="regression" />
+		      </run>
+   			</groups>
+			
+			<classes>
+				<class name="com.safelite.scripts.TC_GetQuoteByYearMakeModel">
+				</class>				
+			</classes>
+		</test>
+	
+	<test name="Android-Tab-Web-local" preserve-order='true'>
+			<parameter name="browser" value="chrome"></parameter>
+			<parameter name="automationName" value="selenium"></parameter>
+			<parameter name="browserVersion" value="NA"></parameter>
+			<parameter name="platformName" value="Android"></parameter>
+			<parameter name="environment" value="local"></parameter>
+			<parameter name="app" value="NA"></parameter>
+			<parameter name="appPackage" value="NA"></parameter>
+			<parameter name="appActivity" value="NA"></parameter>
+			<parameter name="platformVersion" value="4.4"></parameter>
+			<parameter name="appiumUrl" value="http:/0.0.0.0:4723/wd/hub"></parameter>
+			<parameter name="deviceName" value="52003a5b3fdf1100"></parameter>
+			<parameter name="seleniumgridurl" value="http://0.0.0.0:4723/wd/hub"></parameter>
+			
+			<groups>
+		      <run>
+		      	<include name="regression" />
+		      </run>
+   			</groups>
+			
+			<classes>
+				<class name="com.safelite.scripts.TC_GetQuoteByYearMakeModel">
+				</class>
+			</classes>
+		</test>
+		
+	<test name="chromeWindows-SauceLabs" preserve-order='true'>
+		<parameter name="browser" value="chrome" />
+		<parameter name="automationName" value="selenium" />
+		<parameter name="browserVersion" value="46.0" />
+		<parameter name="platformName" value="windows 7" />
+		<parameter name="environment" value="cloudSauceLabs" />
+		<parameter name="seleniumgridurl" value="local" />
+		<parameter name="deviceName" value="NA"></parameter>
+		
+		<groups>
+	      <run>
+	      	<include name="regression" />
+	      </run>
+   		</groups>
+		
+		<classes>
+			<class
+				name="com.safelite.scripts.TC_GetQuoteByYearMakeModelWithIntentionalFailure"></class>		
+		</classes>
+	</test>	 -->	
+		
+</suite>
