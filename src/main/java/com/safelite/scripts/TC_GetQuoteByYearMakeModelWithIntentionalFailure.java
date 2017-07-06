@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.safelite.accelerators.EnableReports;
 import com.safelite.libs.QuoteLib;
 import com.safelite.utilities.TestUtil;
 
@@ -14,6 +15,7 @@ import com.safelite.utilities.TestUtil;
  * @author Cigniti Technologies
  * @LastModifiedDate 05 June 2017
  */
+@EnableReports
 public class TC_GetQuoteByYearMakeModelWithIntentionalFailure extends QuoteLib {
 
 	//Reads data from the test data sheet.
